@@ -1,0 +1,49 @@
+table {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.table-header {
+    background-color: #1392da;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+.table-header-column {
+    border: none;
+}
+
+.col {
+    border: none!important;
+}
+
+th, td {
+    padding: 2px 15px;
+    min-width: 120px!important;
+}
+
+th {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.form-control {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.nav-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+.nav-area ul li {
+    display: inline-block;
+}
