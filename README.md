@@ -1,27 +1,48 @@
-# Datatables
+# Simple Bootstrap Table
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+![imagedemo](https://jennie-package.s3.ap-south-1.amazonaws.com/simple-table-jennie.png)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Intregration Steps
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Extract the code to some directy, Once the code is extracted, user can see folder structure
 
-## Build
+```
+src/
+  app/
+    datatables/
+      datatables.component.html
+      datatables.component.ts
+      datatables.component.css
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+copy folder `datatables` inside `src/app/`, Add `DatatablesComponent` to app.module.ts. The data templete is added to project.
 
-## Running unit tests
+Use show tables use.
+```
+<app-datatables [table_data]="table_data" [columns]="columns"></app-datatables>    
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+where 
+```
+columns = ["affiliation_id", "school_name", "about", "contact_email", "rating", "rated_by"]; // array list of all columns
+table_data = [
+    {
+      "affiliation_id": "2730024",
+      "school_name": "Sardar Patel Vidyalaya (SPV), Lodhi Estate",
+      "about": "Sardar Patel Vidyalaya is alternatively also known as SPV. The school was established in 1958.",
+      "contact_email": "spvdelhi@gmail.com, spv@spvdelhi.org",
+      "latitude": "28.5930975",
+      "longitude": "77.22352599999999",
+      "rating": "4.3",
+      "rated_by": "324",
+      "classes": "Nursery - 12th",
+      "established": "1958",
+      "school_medium": "Hindi",
+      "campus_area": "18964 Sq. Metres",
+      "full_address": "Lodhi Estate, New Delhi, Delhi, India"
+    }
+];  // containing data to show
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
