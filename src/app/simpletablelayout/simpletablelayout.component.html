@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-6">
+        <input class="form-control" placeholder="Start Searching here..." [(ngModel)]="search_text" (keyup)="applyFilter()">
+    </div>
+    <div class="col-md-2">
+        <p class="item-per-page">
+            Show 
+            <select class="form-control items-per-page-select" 
+            [(ngModel)]="displayed_item_per_page" 
+                (change)="reset_items_per_page()">
+                <option *ngFor="let items_showing of items_per_page" [selected]="items_showing === displayed_item_per_page">{{items_showing}}</option>
+            </select> rows
+        </p>
+    </div>
+    <div class="col-md-4">
+        <nav class="nav-area">
+            <div class="pages">
+                <div class="page-link" *ngFor="let page_no of displayed_pages" (click)="show_page(page_no)">{{page_no}}</div>
+            </div>
+        </nav>
+    </div>
+    <div class="col-md-12">
+        <table style="width: 100%;">
+            <tr class="table-header">
+                <th *ngFor="let column of columns;">            
+                    {{column}}
+                </th>
+            </tr>
+            <tr *ngFor="let row of displayed_data; index as row_idx;">
+                <td *ngFor="let column of columns;">
+                    <div *ngIf="columns_style[column]">
+                        <button class="btn btn-primary" *ngIf="columns_style[column].type === 'button'" [routerLink]="get_link(row, column)">
+                            {{get_custom_value(row, column)}}
+                        </button>
+                    </div>
+                    <div *ngIf="!columns_style[column]">
+                        {{ row[column] }}
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-2">
+        <p class="item-per-page">
+            Show 
+            <select class="form-control items-per-page-select" 
+            [(ngModel)]="displayed_item_per_page" 
+                (change)="reset_items_per_page()">
+                <option *ngFor="let items_showing of items_per_page" [selected]="items_showing === displayed_item_per_page">{{items_showing}}</option>
+            </select> rows
+        </p>
+    </div>
+    <div class="col-md-4">
+        <nav class="nav-area">
+            <div class="pages">
+                <div class="page-link" *ngFor="let page_no of displayed_pages" (click)="show_page(page_no)">{{page_no}}</div>
+            </div>
+        </nav>
+    </div>
+</div>

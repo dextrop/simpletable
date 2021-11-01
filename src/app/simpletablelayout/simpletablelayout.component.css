@@ -31,11 +31,33 @@ th {
     margin-bottom: 20px;
 }
 
+.page-link {
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 5px;
+    margin: 2px 2px;
+    width: 30px;
+    text-align: center;
+    display: inline-table;
+    cursor: pointer;
+}
+
 .nav-area {
     margin-top: 20px;
     margin-bottom: 20px;
     overflow: hidden;
     overflow-x: auto;
+}
+
+.item-per-page {
+    display: inline;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.items-per-page-select {
+    width: auto; display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .nav-area ul {
