@@ -1,6 +1,6 @@
 # Simple Bootstrap Table
 
-![imagedemo](https://jennie-package.s3.ap-south-1.amazonaws.com/simple-table-jennie.png)
+![imagedemo](https://jennie-uploaded-assets.s3.ap-south-1.amazonaws.com/Screenshot%202021-11-01%20at%201.16.13%20PM.png)
 
 
 
